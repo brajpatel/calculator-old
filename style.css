@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    height: 850px;
+    width: 650px;
+    background-color: rgb(216, 216, 216);
+    border: 2px solid gray;
+    padding: 15px;
+}
+
+.screen {
+    margin: auto;
+    width: 640px;
+    height: 150px;
+    background-color: rgb(236, 236, 236);
+    border: 2px solid gray;
+}
+
+button {
+    cursor: pointer;
+}
+
+.clear-btn {
+    height: 100px;
+    width: 315px;
+}
+
+.delete-btn {
+    height: 100px;
+    width: 315px;
+}
+
+.clear-btn,
+.delete-btn {
+    margin: 15px 4px;
+    border: none;
+    font-size: 1.8rem;
+}
+
+.btn {
+    width: 145px;
+    height: 130px;
+    margin: 6px;
+    border: none;
+    font-size: 2rem;
+}

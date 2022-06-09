@@ -26,6 +26,10 @@
     height: 150px;
     background-color: rgb(184, 184, 184);
     border: 2px solid gray;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 2rem;
 }
 
 button {

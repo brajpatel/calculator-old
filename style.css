@@ -17,7 +17,7 @@
     width: 650px;
     background-color: rgb(63, 63, 63);
     border: 2px solid gray;
-    padding: 18px;
+    padding: 24px 18px;
 }
 
 .screen {
@@ -30,7 +30,7 @@
 
 button {
     cursor: pointer;
-    border-radius: 2px;
+    border-radius: 4px;
     transition: 350ms ease;
 }
 

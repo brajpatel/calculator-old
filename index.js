@@ -55,7 +55,18 @@ function setOperation(operator) {
 }
 
 function giveResult() {
-    return null
+    if(currOperation === null || shouldResetScreen) return
+    if(currOperation === '÷' && currentScreen.textContent === '0') {
+        alert("You can't divide by zero!")
+        return
+    }
+    secondOperand = currentScreen.textContent
+    currentScreen.textContent = roundResult(operate(currOperation, firstOperand, secondOperand))
+    currOperation = null
+}
+
+function roundResult(number) {
+    return Math.round(number * 1000) / 1000
 }
 
 /* ============================================================================================================== */
@@ -89,7 +100,7 @@ function operate(operator, a, b) {
         case 'x':
             return multiply(a,b)
         
-        case '&#247':
+        case '÷':
             if(b === 0) {
                 return null
             }

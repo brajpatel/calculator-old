@@ -1,4 +1,24 @@
+let shouldResetScreen = false
+
 const screen = document.getElementById('screen')
+const currentScreen = document.getElementById('current-screen')
+const numberButtons = document.querySelectorAll('[data-number]')
+
+numberButtons.forEach((button) => {
+    button.addEventListener('click', () => joinNumber(button.textContent))
+})
+
+function joinNumber(number) {
+    if(currentScreen.textContent === '0' || shouldResetScreen) {
+        resetScreen()
+    }
+    currentScreen.textContent += number
+}
+
+function resetScreen() {
+    currentScreen.textContent = ''
+    shouldResetScreen = false
+}
 
 const clearBtn = document.getElementById('clear-btn')
 clearBtn.addEventListener('click', () => {

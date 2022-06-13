@@ -1,28 +1,32 @@
 let shouldResetScreen = false
 let firstOperand = ''
 let secondOperand = ''
+let currOperation = null
 
-const screen = document.getElementById('screen')
 const currentScreen = document.getElementById('current-screen')
+const lastScreen = document.getElementById('last-screen')
 const clearBtn = document.getElementById('clear-btn')
+const deleteBtn = document.getElementById('delete-btn')
 const numberButtons = document.querySelectorAll('[data-number]')
-const operatorButtons = document.querySelectorAll('[date-operator]')
+const operatorButtons = document.querySelectorAll('[data-operator]')
+const equalsBtn = document.getElementById('equals-btn')
 
 clearBtn.addEventListener('click', clear)
+deleteBtn.addEventListener('click', deleteNumber)
+equalsBtn.addEventListener('click', giveResult)
 
 numberButtons.forEach((button) => {
     button.addEventListener('click', () => joinNumber(button.textContent))
 })
 
 operatorButtons.forEach((button) => {
-    button.addEventListener('click', setOperation(button.textContent))
+    button.addEventListener('click', () => setOperation(button.textContent))
 })
 
 function joinNumber(number) {
-    if(currentScreen.textContent === '0' || shouldResetScreen) {
+    if(currentScreen.textContent === '0' || shouldResetScreen)
         resetScreen()
-    }
-    currentScreen.textContent += number
+        currentScreen.textContent += number
 }
 
 function resetScreen() {
@@ -32,7 +36,21 @@ function resetScreen() {
 
 function clear() {
     currentScreen.textContent = '0'
+    lastScreen.textContent = ''
+    firstOperand = ''
+    secondOperand = ''
+    currOperation = null
 }
+
+function deleteNumber() {
+    currentScreen.textContent = currentScreen.textContent.toString().slice(0, -1)
+}
+
+function giveResult() {
+    return null
+}
+
+/* ============================================================================================================== */
 
 function add(a,b) {
     return a + b

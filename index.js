@@ -27,6 +27,12 @@ function joinNumber(number) {
     if(currentScreen.textContent === '0' || shouldResetScreen)
         resetScreen()
         currentScreen.textContent += number
+
+    if(currentScreen.textContent.length > 15) {
+        alert("You have reached the maximum number limit")
+        deleteNumber()
+    }
+
 }
 
 function resetScreen() {
@@ -57,7 +63,7 @@ function setOperation(operator) {
 function giveResult() {
     if(currOperation === null || shouldResetScreen) return
     if(currOperation === '÷' && currentScreen.textContent === '0') {
-        alert("You can't divide by zero!")
+        alert("Trying to divide by zero are we?")
         return
     }
     secondOperand = currentScreen.textContent

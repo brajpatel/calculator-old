@@ -14,6 +14,7 @@ const equalsBtn = document.getElementById('equals-btn')
 clearBtn.addEventListener('click', clear)
 deleteBtn.addEventListener('click', deleteNumber)
 equalsBtn.addEventListener('click', giveResult)
+document.addEventListener('keydown', keyboardInput)
 
 numberButtons.forEach((button) => {
     button.addEventListener('click', () => joinNumber(button.textContent))
@@ -75,6 +76,24 @@ function roundResult(number) {
     return Math.round(number * 1000) / 1000
 }
 
+function keyboardInput(e) {
+    if(e.key >= 0 || e.key <=9) {
+        joinNumber(e.key)
+    }
+    if(e.key === 'Escape') {
+        clear()
+    }
+    if(e.key === 'Backspace') {
+        deleteNumber()
+    }
+    if(e.key === 'Enter') {
+        giveResult()
+    }
+    if(e.key === '+'|| e.key === '-' || e.key === 'x' || e.key === '/') {
+        setOperation(e.key)
+    }
+}
+
 /* ============================================================================================================== */
 
 function add(a,b) {
@@ -106,7 +125,7 @@ function operate(operator, a, b) {
         case 'x':
             return multiply(a,b)
         
-        case '÷':
+        case '/':
             if(b === 0) {
                 return null
             }

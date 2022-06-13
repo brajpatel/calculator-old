@@ -64,8 +64,9 @@ button {
 .delete-btn {
     margin: 15px 4px;
     border: none;
-    font-size: 1.8rem;
-    background-color: rgb(255, 131, 131);
+    font-size: 1.6rem;
+    background-color: rgb(250, 104, 104);
+    text-transform: uppercase;
 }
 
 .clear-btn:hover,

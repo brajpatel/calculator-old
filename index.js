@@ -46,6 +46,14 @@ function deleteNumber() {
     currentScreen.textContent = currentScreen.textContent.toString().slice(0, -1)
 }
 
+function setOperation(operator) {
+    if(currOperation !== null) giveResult()
+    firstOperand = currentScreen.textContent
+    currOperation = operator
+    lastScreen.textContent = `${firstOperand} ${currOperation}`
+    shouldResetScreen = true
+}
+
 function giveResult() {
     return null
 }

@@ -63,7 +63,7 @@ function setOperation(operator) {
 
 function giveResult() {
     if(currOperation === null || shouldResetScreen) return
-    if(currOperation === '÷' && currentScreen.textContent === '0') {
+    if(currOperation === '/' && currentScreen.textContent === '0') {
         alert("Trying to divide by zero are we?")
         return
     }

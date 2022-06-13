@@ -91,13 +91,11 @@ button {
     box-shadow: inset 0 0 150px white;
 }
 
-.decimal,
 .operator {
     background-color: rgb(129, 129, 192);
     font-weight: bold;
 }
 
-.decimal:hover,
 .operator:hover {
     box-shadow: inset 0 0 150px rgb(84, 84, 255);
 }
@@ -105,6 +103,7 @@ button {
 .equal {
     background-color: rgb(116, 204, 116);
     font-weight: bold;
+    width: 310px;
 }
 
 .equal:hover {

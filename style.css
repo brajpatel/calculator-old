@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Kdam Thmor Pro';
+    background: rgb(102, 102, 102);
 }
 
 .container {
@@ -12,38 +13,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(102, 102, 102);
 }
 
 .calculator {
-    height: 850px;
-    width: 650px;
+    height: 650px;
+    width: 570px;
     background-color: rgb(63, 63, 63);
     border: 2px solid rgb(54, 54, 54);
-    padding: 24px 18px;
+    padding: 24px 16px 40px 18px;
 }
 
 .screen {
     margin: auto;
-    width: 640px;
-    height: 150px;
+    width: 540px;
+    height: 130px;
     background-color: rgb(184, 184, 184);
     border: 2px solid rgb(54, 54, 54);
-    font-size: 2.2rem;
 }
 
+.current-screen,
 .last-screen {
     height: 40px;
     max-width: 640px;
-    padding: 10px 40px;
+    padding: 10px 40px 15px 40px;
+    background: transparent;
+    font-size: 2rem;
 }
 
 .current-screen {
-    max-height: 60px;
-    margin-top: 15px;
     text-align: right;
-    max-width: 640px;
-    padding: 0 30px;
 }
 
 
@@ -53,19 +51,11 @@ button {
     transition: 350ms ease;
 }
 
-.clear-btn {
-    height: 100px;
-    width: 315px;
-}
-
-.delete-btn {
-    height: 100px;
-    width: 315px;
-}
-
 .clear-btn,
 .delete-btn {
-    margin: 15px 4px;
+    height: 75px;
+    width: 255px;
+    margin: 15px 14px;
     border: none;
     font-size: 1.6rem;
     background-color: rgb(250, 104, 104);
@@ -79,9 +69,9 @@ button {
 }
 
 .btn {
-    width: 145px;
-    height: 130px;
-    margin: 7px;
+    width: 120px;
+    height: 90px;
+    margin: 9px;
     border: none;
     font-size: 2rem;
 }
@@ -106,7 +96,7 @@ button {
 .equal {
     background-color: rgb(116, 204, 116);
     font-weight: bold;
-    width: 309px;
+    width: 263px;
 }
 
 .equal:hover {
@@ -119,4 +109,5 @@ span {
     font-style: italic;
     font-weight: 100;
     font-size: 1.3rem;
+    background: transparent;
 }

@@ -1,11 +1,21 @@
 let shouldResetScreen = false
+let firstOperand = ''
+let secondOperand = ''
 
 const screen = document.getElementById('screen')
 const currentScreen = document.getElementById('current-screen')
+const clearBtn = document.getElementById('clear-btn')
 const numberButtons = document.querySelectorAll('[data-number]')
+const operatorButtons = document.querySelectorAll('[date-operator]')
+
+clearBtn.addEventListener('click', clear)
 
 numberButtons.forEach((button) => {
     button.addEventListener('click', () => joinNumber(button.textContent))
+})
+
+operatorButtons.forEach((button) => {
+    button.addEventListener('click', setOperation(button.textContent))
 })
 
 function joinNumber(number) {
@@ -20,10 +30,9 @@ function resetScreen() {
     shouldResetScreen = false
 }
 
-const clearBtn = document.getElementById('clear-btn')
-clearBtn.addEventListener('click', () => {
-    screen.innerHTML = ''
-})
+function clear() {
+    currentScreen.textContent = '0'
+}
 
 function add(a,b) {
     return a + b
@@ -54,7 +63,7 @@ function operate(operator, a, b) {
         case 'x':
             return multiply(a,b)
         
-        case '/':
+        case '&#247':
             if(b === 0) {
                 return null
             }

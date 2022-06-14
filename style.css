@@ -16,28 +16,28 @@
 }
 
 .calculator {
-    height: 650px;
-    width: 570px;
+    height: 80vh;
+    width: 30vw;
     background-color: rgb(63, 63, 63);
     border: 2px solid rgb(54, 54, 54);
-    padding: 24px 16px 40px 18px;
+    padding: 2vh 0.5vw 3vh 0.5vw;
 }
 
 .screen {
-    margin: auto;
-    width: 540px;
-    height: 130px;
+    width: 28vw;
+    height: 17vh;
     background-color: rgb(184, 184, 184);
     border: 2px solid rgb(54, 54, 54);
+    margin-left: 1vw;
 }
 
 .current-screen,
 .last-screen {
-    height: 40px;
+    height: 4vh;
     max-width: 640px;
-    padding: 10px 40px 15px 40px;
+    padding: 1vh 2vw 2.8vh 1.5vw;
     background: transparent;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .current-screen {
@@ -53,13 +53,17 @@ button {
 
 .clear-btn,
 .delete-btn {
-    height: 75px;
-    width: 255px;
-    margin: 15px 14px;
+    height: 9vh;
+    width: 13.5vw;
+    margin: 2vh 0.5vw 1vh 0.5vw;
     border: none;
-    font-size: 1.6rem;
+    font-size: 1.1rem;
     background-color: rgb(250, 104, 104);
     text-transform: uppercase;
+}
+
+.clear-btn {
+    margin-left: 2.2vh;
 }
 
 .clear-btn:hover,
@@ -69,11 +73,11 @@ button {
 }
 
 .btn {
-    width: 120px;
-    height: 90px;
-    margin: 9px;
+    width: 6vw;
+    height: 11vh;
+    margin: 1vh 0 1vh 1vw;
     border: none;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .number {
@@ -96,7 +100,7 @@ button {
 .equal {
     background-color: rgb(116, 204, 116);
     font-weight: bold;
-    width: 263px;
+    width: 13.3vw;
 }
 
 .equal:hover {
@@ -104,10 +108,9 @@ button {
 }
 
 span {
-    margin-left: 10px;
     text-transform: lowercase;
     font-style: italic;
     font-weight: 100;
-    font-size: 1.3rem;
+    font-size: 1rem;
     background: transparent;
 }

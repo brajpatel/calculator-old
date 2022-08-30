@@ -5,6 +5,6 @@ A classic calculator built using HTML, CSS and JavaScript. It allows you to perf
 - Extract from the folder
 - Run the index.html file in your desired web browser
 
-Alternatively, you can demo the calculator by [clicking here](https://brajpatel.github.io/calculator/).
+Alternatively, you can demo the calculator by clicking [here](https://brajpatel.github.io/calculator-old/).
 
 ##### Happy Calculating!
